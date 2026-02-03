@@ -1,15 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 import type { RouteRecordRaw } from "vue-router";
 import App from "@/App.vue";
-const BASE_URL = "/";
 const routes: Readonly<RouteRecordRaw[]> = [
   {
-    path: BASE_URL,
+    path: __BASE_URL__,
     component: App,
   },
 ];
 const router = createRouter({
-  history: createWebHistory(BASE_URL),
+  history: createWebHistory(__BASE_URL__),
   routes,
 });
 
