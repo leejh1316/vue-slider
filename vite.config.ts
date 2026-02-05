@@ -18,5 +18,8 @@ export default defineConfig(() => {
       __BASE_URL__: JSON.stringify(baseUrl),
     },
     base: baseUrl,
+    build: {
+      outDir: "dist-demo",
+    },
   };
 });
