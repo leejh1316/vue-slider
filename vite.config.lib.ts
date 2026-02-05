@@ -2,9 +2,16 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
-
+import vue from "@vitejs/plugin-vue";
 export default defineConfig({
-  plugins: [dts({ insertTypesEntry: true, rollupTypes: false })],
+  plugins: [
+    vue(),
+    dts({
+      insertTypesEntry: true,
+      rollupTypes: false,
+      tsconfigPath: resolve(__dirname, "tsconfig.build.json"),
+    }),
+  ],
   build: {
     outDir: "dist",
     emptyOutDir: true,
@@ -14,8 +21,8 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: [],
-      output: { globals: {} },
+      external: ["vue"],
+      output: { globals: { vue: "Vue" } },
     },
   },
 });
