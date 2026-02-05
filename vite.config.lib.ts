@@ -15,6 +15,7 @@ export default defineConfig({
     cssInjectedByJsPlugin(),
   ],
   build: {
+    cssCodeSplit: false,
     outDir: "dist",
     emptyOutDir: true,
     lib: {
