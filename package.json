@@ -17,6 +17,11 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leejh1316/vue-slider.git"
+  },
+  "homepage": "https://leejh1316.github.io/vue-slider/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
