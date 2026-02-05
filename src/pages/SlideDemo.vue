@@ -28,6 +28,16 @@ import MusicQuick from "@components/MusicQuick.vue";
         </Slide>
       </div>
     </div>
+    <div class="section">
+      <div class="section-title">추천 음악</div>
+      <div class="over-container">
+        <Slide :slide-option="{ sliderType: 'default', gap: 16 }">
+          <SlideItem v-for="_ of 20">
+            <MusicSquareCard></MusicSquareCard>
+          </SlideItem>
+        </Slide>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
