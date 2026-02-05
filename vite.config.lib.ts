@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
 import vue from "@vitejs/plugin-vue";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
   plugins: [
     vue(),
@@ -11,6 +12,7 @@ export default defineConfig({
       rollupTypes: false,
       tsconfigPath: resolve(__dirname, "tsconfig.build.json"),
     }),
+    cssInjectedByJsPlugin(),
   ],
   build: {
     outDir: "dist",
